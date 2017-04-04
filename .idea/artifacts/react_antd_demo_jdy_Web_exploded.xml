@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="react-antd-demo-jdy:Web exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/react_antd_demo_jdy_Web_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="react-antd-demo-jdy/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="react-antd-demo-jdy" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
