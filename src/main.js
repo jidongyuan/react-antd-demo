@@ -1,5 +1,5 @@
 /**
- * 
+ *
  * @authors luozh@snail.com
  * @date    2016-03-21 16:42:35
  * @description 主入口模块
@@ -61,15 +61,15 @@ class Sider extends React.Component {
     render() {
         return (
             <div>
-                <div id="leftMenu"> 
+                <div id="leftMenu">
                     <img src='src/assets/images/logo.png' width="50" id="logo"/>
                     <Menu theme="dark"
-                        onClick={this.handleClick}
-                        style={{ width: 185 }}
-                        defaultOpenKeys={['sub1', 'sub2']}
-                        defaultSelectedKeys={[this.state.current]}
-                        mode="inline"
-                    >
+                          onClick={this.handleClick}
+                          style={{ width: 185 }}
+                          defaultOpenKeys={['sub1', 'sub2']}
+                          defaultSelectedKeys={[this.state.current]}
+                          mode="inline"
+                        >
                         <SubMenu key="sub1" title={<span><Icon type="mail" /><span>导航一</span></span>}>
                             <Menu.Item key="1"><Link to="/myTable">表格</Link></Menu.Item>
                             <Menu.Item key="2"><Link to="/myForm">表单</Link></Menu.Item>
