@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>菜鸟教程 React 实例</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    var myStyle = {
+        color:'red',
+        marginTop:10,
+        clear:both
+        /*,margin-top:10*/
+    };
+    var clear = {
+        height:10,
+        clear:'both'
+    };
+    var WebSite = React.createClass({
+        render: function() {
+            return (
+                    <div>
+                        <Name name={this.props.name} />
+                        <Link site={this.props.site} />
+                        <Bottom />
+                        <Clear />
+                    </div>
+            );
+        }
+    });
+
+    var Name = React.createClass({
+        render: function() {
+            return (
+                    <h1>{this.props.name}</h1>
+            );
+        }
+    });
+
+    var Link = React.createClass({
+        render: function() {
+            return (
+                    <a href={this.props.site}>
+                        {this.props.site}
+                    </a>
+            );
+        }
+    });
+
+    var Bottom = React.createClass({
+        render: function() {
+            return (
+                    <div style={myStyle}>
+                        底部导航
+                    </div>
+            );
+        }
+    });
+
+    var Clear = React.createClass({
+        render: function() {
+            return (
+                    <div style={clear}>
+                    </div>
+            );
+        }
+    });
+
+
+
+    ReactDOM.render(
+            <WebSite name="菜鸟教程" site=" http://www.runoob.com" />,
+        document.getElementById('example')
+    );
+</script>
+</body>
+</html>
