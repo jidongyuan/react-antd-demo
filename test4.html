@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>React 组件 API</title>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react.min.js"></script>
+    <script src="https://cdn.bootcss.com/react/15.4.2/react-dom.min.js"></script>
+    <script src="https://cdn.bootcss.com/babel-standalone/6.22.1/babel.min.js"></script>
+</head>
+<body>
+
+<div id="message" align="center"></div>
+
+<script type="text/babel">
+    //创建组件
+    var Counter = React.createClass({
+        getInitialState: function () {
+            return { clickCount: 0 };
+        },
+        handleClick: function () {
+            this.setState(function(state) {
+                return {clickCount: state.clickCount + 1};
+            });
+        },
+        /*this.setState 方法用于修改状态值，每次修改以后，自动调用 this.render 方法，再次渲染组件。*/
+        render: function () {
+            return (<h2 onClick={this.handleClick}>点我！点击次数为: {this.state.clickCount}</h2>);
+        }
+    });
+    ReactDOM.render(
+            <Counter />,
+        document.getElementById('message')
+    );
+</script>
+
+</body>
+</html>
